@@ -6,8 +6,8 @@ $VCS_HOME = $ENV{VCS_HOME};
 
 sub WriteMakefile {
     my %params = (
-		  VERSION => '1.2',
-		  INC => ("-I$VCS_HOME/sun_sparc_solaris_5.4/lib"
+		  INC => (" -I$VCS_HOME/sun_sparc_solaris_5.4/lib"
+			  ." -I$VCS_HOME/sun_sparc_solaris_5.5.1/lib"
 			  ." -I$::RealBin"),
 		  @_);
     ExtUtils::MakeMaker::WriteMakefile (%params);

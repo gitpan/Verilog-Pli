@@ -94,12 +94,12 @@ STORE(nt, net, value, ...)
     char *value
 CODE:
 {
-    boolean_t log = FALSE;
+    int/*boolean*/ logen = FALSE;
     static s_setval_delay accdelay = {{accRealTime},accNoDelay};
     static s_setval_value accvalue = {accDecStrVal};
     handle net_handle = net_defaulted_handle (nt,net);
     if (items > 3) {
-	log = SvIV(ST(3));
+	logen = SvIV(ST(3));
     }
     RETVAL = 0;
     if (net_handle) {
@@ -110,7 +110,7 @@ CODE:
 	acc_set_value (net_handle, &accvalue, &accdelay);
 	if (!acc_error_flag) {
 	    RETVAL = TRUE;
-	    if (log || pli_debug_level>=8) {
+	    if (logen || pli_debug_level>=8) {
 		pli_info (0, "%-25s set to: %10s\n",
 			  acc_fetch_name (net_handle),
 			  acc_fetch_value (net_handle, "%d"));

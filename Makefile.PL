@@ -13,6 +13,13 @@ maintainer-clean: distclean
 	-rm README Makefile
 
 dist: distcheck README
+
+clean::
+	(cd example ; make clean)
+
+test::
+	(cd example ; make)
+
 ";
 }
 
@@ -20,6 +27,9 @@ Verilog::Pli::MMutil::WriteMakefile
     (
      NAME => "Verilog::Pli",
      DISTNAME  => 'Verilog-Pli',
+     AUTHOR	=> 'Wilson Snyder <wsnyder@world.std.com>',
+     VERSION_FROM => 'Pli.pm',
+     ABSTRACT_FROM => 'Pli.pm',
      'dist'    => {COMPRESS => 'gzip -9f',
 		   SUFFIX   => '.gz', 
 		   DIST_DEFAULT => 'README all tardist',

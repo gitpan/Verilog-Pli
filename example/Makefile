@@ -6,7 +6,8 @@
 
 # Path to VCS
 VCS = $(VCS_HOME)/bin/vcs
-CFLAGS += -I$(VCS_HOME)/sun_sparc_solaris_5.4/lib
+CFLAGS += -I$(VCS_HOME)/sun_sparc_solaris_5.4/lib \
+	-I$(VCS_HOME)/sun_sparc_solaris_5.5.1/lib
 
 # Which compiler
 CC = gcc

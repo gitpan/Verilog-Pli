@@ -20,7 +20,7 @@ Verilog::Pli::IO->tie_stdout();
 
 print "PERL PROGRAM RAN!\n";
 
-print "Here's a list of signals:\n";
+print "Here's a list of signals under hello_top.v:\n";
 tie %NET, 'Verilog::Pli::Net', 'hello_top';
 foreach (keys %NET) {
     print "   Found signal $_\n";
@@ -32,4 +32,3 @@ sub print_w_value {
 }
 
 1;
-

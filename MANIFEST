@@ -1,16 +1,18 @@
 COPYING
-README
 MANIFEST
 Makefile.PL
+NEWS
 Net/Makefile.PL
 Net/Net.pm
 Net/Net.xs
 Net/typemap
-Pli/IO.pm
 Pli.pm
 Pli.xs
+Pli/IO.pm
 PliStd.h
+README
 Verilog/Pli/MMutil.pm
+configure
 example/Makefile
 example/cmd.c
 example/hello.v
@@ -19,4 +21,3 @@ example/pli_hello.c
 example/simperl_boot.pl
 readme.texi
 typemap
-configure

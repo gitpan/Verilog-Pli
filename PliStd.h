@@ -3,12 +3,25 @@
 
 /***********************************************************************/
 /* Verilog PLI: */
+
+#ifdef __linux__
+# include <stdarg.h>
+# define _VARARGS_H	/* Stdarg conflicts! */
+# ifdef bool
+#  undef bool	/* Redefined by VCS (none of their business IMHO.) */
+# endif
+#endif
+
 #include <acc_user.h>
 #include <vcsuser.h>
 
 /***********************************************************************/
 /* Perl */
-#define HAS_BOOL
+
+#ifndef __linux__
+# define HAS_BOOL
+#endif
+
 #define _STDARG_H
 #define _VARARGS_H
 #include "EXTERN.h"

@@ -1,15 +1,15 @@
 # Verilog::Pli::Net - Verilog PLI - %NET tied hash
-# $Id: Net.pm,v 1.3 1999/08/09 13:40:26 wsnyder Exp $
-# Author: Wilson Snyder <wsnyder@ultranet.com>
+# $Id: Net.pm,v 1.4 2000/01/21 15:15:44 wsnyder Exp $
+# Author: Wilson Snyder <wsnyder@world.std.com>
 ######################################################################
 #
-# This package provides access to Perl nets with a tied hash
-# 
-# This program is Copyright 1998 by Wilson Snyder.
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
+# This program is Copyright 2000 by Wilson Snyder.
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of either the GNU General Public License or the
+# Perl Artistic License, with the exception that it cannot be placed
+# on a CD-ROM or similar media for commercial distribution without the
+# prior approval of the author.
 # 
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -66,7 +66,7 @@ C<http://www.ultranet.com/~wsnyder/verilog-perl>.
 
 =head1 AUTHORS
 
-Wilson Snyder <wsnyder@ultranet.com>
+Wilson Snyder <wsnyder@world.std.com>
 
 =cut
 ######################################################################
@@ -86,7 +86,7 @@ use Verilog::Pli;
 ######################################################################
 #### Configuration Section
 
-$VERSION = $Verilog::Pli::VERSION;
+$VERSION = '1.3';
 
 bootstrap Verilog::Pli::Net;
 

@@ -22,12 +22,13 @@ This is the Verilog::Pli Perl Package.
 @node Copyright, Description, Top, Top
 @section Copyright
 
-This package is Copyright 1998 by Wilson Snyder @email{wsnyder@@ultranet.com}.
+This package is Copyright 2000 by Wilson Snyder @email{wsnyder@@world.std.com}.
 
-You may distribute under the terms of either the GNU General Public License
-or the Artistic License, as specified in the Perl README file, with the
-exception that it cannot be placed on a CD-ROM or similar media for commercial
-distribution without the prior approval of the author.
+You may distribute under the terms of either the GNU General Public
+License or the Perl Artistic License, as specified in the Perl README
+file, with the exception that it cannot be placed on a CD-ROM or similar
+media for commercial distribution without the prior approval of the
+author.
 
 This code is provided with no warranty of any kind, and is used entirely at
 your own risk.
@@ -60,9 +61,11 @@ This version of Verilog::Pli has been built and tested on:
 
 @itemize @bullet
 @item sparc-sun-solaris2.6
+@item i686-linux-2.2.5
 @end itemize
 
-It should run on any system with perl and VCS or other simulator.
+It should run on any system with Perl and VCS or other Verilog simulator
+with minor porting.
 
 @node Installation, Interpreter, Supported Systems, Top
 @section Installation
@@ -80,6 +83,9 @@ Type @samp{make} to compile Verilog::Pli.
 @item
 Type @samp{make install} to install the programs and any data files and
 documentation.
+
+@item
+If you have VCS, @samp{cd example ; make} to see an example.
 
 @end enumerate
 
