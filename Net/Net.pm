@@ -1,9 +1,9 @@
 # Verilog::Pli::Net - Verilog PLI - %NET tied hash
-# $Id: Net.pm,v 1.9 2002/08/30 14:46:09 wsnyder Exp $
+# $Id: Net.pm,v 1.11 2003/07/22 15:39:01 wsnyder Exp $
 # Author: Wilson Snyder <wsnyder@wsnyder.org>
 ######################################################################
 #
-# This program is Copyright 2000 by Wilson Snyder.
+# This program is Copyright 2003 by Wilson Snyder.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of either the GNU General Public License or the
@@ -42,6 +42,11 @@ affects the Verilog signal named the same as the hash key.  The hiearchy
 may be placed in front of the signal names using standard dot notation, or
 if not found, the scope from when the tie was established, or later scope()
 calls is prepended to the passed signal name.
+
+  Signal names may have a leading %b: %d: %x: or %s: to return or set the
+value in the binary, decimal, hex, or string format respectively.  Values
+may have a leading 0b or 0x to set the value in binary or hex format
+respectively.
 
 =over 4
 
@@ -84,7 +89,7 @@ use Verilog::Pli;
 ######################################################################
 #### Configuration Section
 
-$VERSION = '1.5';
+$VERSION = '1.6';
 
 bootstrap Verilog::Pli::Net;
 

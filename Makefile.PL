@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.8 2002/08/30 14:46:09 wsnyder Exp $
+# $Id: Makefile.PL,v 1.9 2003/07/22 14:46:56 wsnyder Exp $
 # DESCRIPTION: Perl ExtUtils: Type 'perl Makefile.PL' to create a Makefile for this package
 
 use FindBin qw($RealBin);
@@ -15,7 +15,7 @@ use Config;
 sub MY::postamble {
 "
 README: readme.texi
-	-rm \$@
+	-rm -f \$@
 	makeinfo \$< --output \$@ --no-headers --no-validate
 
 clean::

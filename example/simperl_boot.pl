@@ -1,6 +1,8 @@
-# $Id: simperl_boot.pl,v 1.4 2001/02/09 15:43:53 wsnyder Exp $
+# $Id: simperl_boot.pl,v 1.5 2003/07/22 15:39:01 wsnyder Exp $
 # DESCRIPTION: Verilog::PLI: Example perl code booted in verilog initial block
 ######################################################################
+
+use Test;  BEGIN { plan tests => 11 }
 
 BEGIN {
     printf "Hello from perl.... Booting...\n";
@@ -22,6 +24,7 @@ use Verilog::Pli::IO;
 Verilog::Pli::IO->tie_stdout();
 
 print "PERL PROGRAM RAN!\n";
+ok(1);
 
 print "Here's a list of signals under hello_top.v:\n";
 tie %NET, 'Verilog::Pli::Net', 'hello_top';
@@ -30,8 +33,16 @@ foreach (keys %NET) {
 }
 print "\n";
 
-sub print_w_value {
-    print "w is: ", $NET{w}, "\n";
-}
+# Test out the format specifiers
+ok (exists $NET{int});
+ok (exists $NET{'%x:int'});
+$NET{'%b:int'} = 10; ok ($NET{int}==2);
+$NET{'%x:int'} = 10; ok ($NET{int}==16);
+$NET{'%h:int'} = 10; ok ($NET{int}==16);
+$NET{'%d:int'} = 10; ok ($NET{int}==10);
+$NET{int} = 10; ok ($NET{'%b:int'}==1010);
+$NET{int} = 10; ok ($NET{'%d:int'}==10);
+$NET{int} = '0x10'; ok ($NET{int}==16);
+$NET{int} = '0b10'; ok ($NET{int}==2);
 
 1;

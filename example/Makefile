@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6 2001/02/09 15:43:53 wsnyder Exp $
+# $Id: Makefile,v 1.8 2003/07/22 15:39:01 wsnyder Exp $
 # DESCRIPTION: Verilog::PLI: Example Makefile for trivial PLI use under VCS.
 ######################################################################
 
@@ -10,9 +10,9 @@ OSTYPE := $(shell uname -s)
 # Returns something like '/usr/local/lib/perl5/5.00503/sun4-solaris'
 PERL := perl
 PERL_ARCHLIBEXP := `$(PERL) -MConfig -e 'print $$Config{archlibexp}'`
-ifeq ($OSTYPE,Linux)
+CFLAGS += -I$(VCS_HOME)/include
+ifeq ($(OSTYPE),Linux)
 	CFLAGS += -I$(VCS_HOME)/intel_i686_linux_2.2
-	OS_COPT += -lsocket
 else
 	CFLAGS += -I$(VCS_HOME)/sun_sparc_solaris_5.4/lib \
 		  -I$(VCS_HOME)/sun_sparc_solaris_5.5.1/lib
@@ -49,6 +49,7 @@ PLI_SRC_FILES = pli_hello.c cmd.c perlxsi.c
 PLI_TABLE = pli.tab
 
 all:	run
+test:   all
 
 $(MODEL):	$(VERILOG_TOP_FILE) $(PLI_SRC_FILES) $(PLI_TABLE)
 	$(VCS) -ld "$(CC) $(PLI_LINK_FLAGS)" -cc $(CC) $(CLI_OPTS) -CFLAGS "$(CFLAGS)" \

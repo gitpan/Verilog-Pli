@@ -1,9 +1,9 @@
 # Verilog::Pli - Verilog PLI
-# $Id: Pli.pm,v 1.14 2002/08/30 14:46:09 wsnyder Exp $
+# $Id: Pli.pm,v 1.15 2003/07/21 21:32:31 wsnyder Exp $
 # Author: Wilson Snyder <wsnyder@wsnyder.org>
 ######################################################################
 #
-# This program is Copyright 2000 by Wilson Snyder.
+# This program is Copyright 2003 by Wilson Snyder.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of either the GNU General Public License or the
@@ -92,7 +92,7 @@ use vars qw($VERSION);
 ######################################################################
 #### Configuration Section
 
-$VERSION = '1.5';
+$VERSION = '1.6';
 
 bootstrap Verilog::Pli;
 

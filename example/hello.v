@@ -12,6 +12,7 @@ module hello_top;
    // invoke user-defined pli routine
    initial $hello_verilog;	
 
+   integer int;
    reg w;
    wire z = w;
 
