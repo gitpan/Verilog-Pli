@@ -1,6 +1,6 @@
 # Verilog::Pli::Net - Verilog PLI - %NET tied hash
-# $Id: Net.pm,v 1.4 2000/01/21 15:15:44 wsnyder Exp $
-# Author: Wilson Snyder <wsnyder@world.std.com>
+# $Id: Net.pm,v 1.6 2001/02/13 17:44:44 wsnyder Exp $
+# Author: Wilson Snyder <wsnyder@wsnyder.org>
 ######################################################################
 #
 # This program is Copyright 2000 by Wilson Snyder.
@@ -66,7 +66,7 @@ C<http://www.ultranet.com/~wsnyder/verilog-perl>.
 
 =head1 AUTHORS
 
-Wilson Snyder <wsnyder@world.std.com>
+Wilson Snyder <wsnyder@wsnyder.org>
 
 =cut
 ######################################################################
@@ -86,7 +86,7 @@ use Verilog::Pli;
 ######################################################################
 #### Configuration Section
 
-$VERSION = '1.3';
+$VERSION = '1.4';
 
 bootstrap Verilog::Pli::Net;
 

@@ -113,7 +113,7 @@ CODE:
 	    if (logen || pli_debug_level>=8) {
 		pli_info (0, "%-25s set to: %10s\n",
 			  acc_fetch_name (net_handle),
-			  acc_fetch_value (net_handle, "%d"));
+			  acc_fetch_value (net_handle, "%d", NULL));
 	    }
 	}
 	acc_close ();
@@ -145,7 +145,7 @@ CODE:
     handle net_handle = net_defaulted_handle (nt,net);
     ST(0) = sv_newmortal();
     if (net_handle != NULL) {
-	char *val = acc_fetch_value (net_handle, "%d");
+	char *val = acc_fetch_value (net_handle, "%d", NULL);
 	if (val != NULL) {
 	    while (*val == ' ') val++;	/* Else '  0' will return true */
 	    sv_setpv (ST(0), val);

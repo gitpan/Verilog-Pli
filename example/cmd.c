@@ -1,5 +1,5 @@
-/* $Id: cmd.c,v 1.2 2000/01/21 15:15:45 wsnyder Exp $ */
-/* Author: Wilson Snyder <wsnyder@world.std.com> */
+/* $Id: cmd.c,v 1.5 2001/02/13 15:11:17 wsnyder Exp $ */
+/* Author: Wilson Snyder <wsnyder@wsnyder.org> */
 /***********************************************************************
  *
  * This program is Copyright 2000 by Wilson Snyder.
@@ -18,6 +18,8 @@
  * If you do not have a copy of the GNU General Public License write to
  * the Free Software Foundation, Inc., 675 Mass Ave, Cambridge,
  * MA 02139, USA.
+ **********************************************************************
+ * DESCRIPTION: Verilog::PLI: Example C PLI code that calls perl
  **********************************************************************/
 
 #include <stdarg.h>
@@ -32,6 +34,11 @@
 #define HAS_BOOL		/* Also defined in pli headers, so skip in perl */
 #include <EXTERN.h>             /* from the Perl distribution */
 #include <perl.h>               /* from the Perl distribution */
+
+#ifndef PL_na
+# define PL_sv_undef	sv_undef
+# define PL_na		na
+#endif
 
 /***********************************************************************/
 /* Values */

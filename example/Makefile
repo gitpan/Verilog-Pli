@@ -1,13 +1,22 @@
-#
-# Example of trivial PLI use in VCS.
-#
+# $Id: Makefile,v 1.6 2001/02/09 15:43:53 wsnyder Exp $
+# DESCRIPTION: Verilog::PLI: Example Makefile for trivial PLI use under VCS.
+######################################################################
 
 # This section may need tuning
 
 # Path to VCS
 VCS = $(VCS_HOME)/bin/vcs
-CFLAGS += -I$(VCS_HOME)/sun_sparc_solaris_5.4/lib \
-	-I$(VCS_HOME)/sun_sparc_solaris_5.5.1/lib
+OSTYPE := $(shell uname -s)
+# Returns something like '/usr/local/lib/perl5/5.00503/sun4-solaris'
+PERL := perl
+PERL_ARCHLIBEXP := `$(PERL) -MConfig -e 'print $$Config{archlibexp}'`
+ifeq ($OSTYPE,Linux)
+	CFLAGS += -I$(VCS_HOME)/intel_i686_linux_2.2
+	OS_COPT += -lsocket
+else
+	CFLAGS += -I$(VCS_HOME)/sun_sparc_solaris_5.4/lib \
+		  -I$(VCS_HOME)/sun_sparc_solaris_5.5.1/lib
+endif
 
 # Which compiler
 CC = gcc
@@ -20,9 +29,9 @@ CC = gcc
 # Also note we cheat and statically link in the dynamic Verilog library
 # this is not strictly needed, but makes packaging simpler
 PERL_OPTS = \
-	/usr/local/lib/perl5/5.00503/sun4-solaris/auto/DynaLoader/DynaLoader.a \
-	/usr/local/lib/perl5/5.00503/sun4-solaris/CORE/libperl.a \
-	-lsocket -lnsl -ldl -lm -lc -lcrypt
+	$(PERL_ARCHLIBEXP)/auto/DynaLoader/DynaLoader.a \
+	$(PERL_ARCHLIBEXP)/CORE/libperl.a \
+	$(OS_COPT) -lnsl -ldl -lm -lc -lcrypt
 
 #	../blib/arch/auto/Verilog/Pli/Pli.so \
 
@@ -47,7 +56,7 @@ $(MODEL):	$(VERILOG_TOP_FILE) $(PLI_SRC_FILES) $(PLI_TABLE)
 		-Mupdate $(PERL_OPTS) -o $(MODEL)
 
 run:	$(MODEL)
-	$(MODEL)
+	./$(MODEL)
 
 perlxsi.c:
 	perl -MExtUtils::Embed -e xsinit -- -o perlxsi.c

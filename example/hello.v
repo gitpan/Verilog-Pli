@@ -1,4 +1,4 @@
-// Verilog `top' file.
+// DESCRIPTION: Verilog::PLI: Example Verilog code that will call perl
 
 module hello_top;
 

@@ -1,6 +1,6 @@
 #/* -*- Mode: C -*- */
-#/* $Id: Pli.xs,v 1.10 2000/01/21 15:15:40 wsnyder Exp $ */
-#/* Author: Wilson Snyder <wsnyder@world.std.com> */
+#/* $Id: Pli.xs,v 1.11 2001/02/13 15:11:16 wsnyder Exp $ */
+#/* Author: Wilson Snyder <wsnyder@wsnyder.org> */
 #/*##################################################################### */
 #/* */
 #/* This program is Copyright 2000 by Wilson Snyder. */

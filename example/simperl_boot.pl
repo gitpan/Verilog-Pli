@@ -1,8 +1,11 @@
+# $Id: simperl_boot.pl,v 1.4 2001/02/09 15:43:53 wsnyder Exp $
+# DESCRIPTION: Verilog::PLI: Example perl code booted in verilog initial block
+######################################################################
 
 BEGIN {
     printf "Hello from perl.... Booting...\n";
     printf "  If you get a 'Can't Locate...' change the use lib in\n";
-    printf "  simperl_boot_script.pl\n";
+    printf "  simperl_boot.pl\n";
 }
 
 # This needs to point to where Verilog::Pli lives

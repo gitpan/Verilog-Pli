@@ -1,3 +1,5 @@
+// DESCRIPTION: Verilog::PLI: Example PLI mapping file
+//
 // This file is used by VCS to map user-defined `$' commands to specific
 // C routines.
 
