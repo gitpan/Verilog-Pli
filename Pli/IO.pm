@@ -1,5 +1,5 @@
 # Verilog::Pli::IO - Verilog PLI - I/O rerouting
-# $Id: IO.pm,v 1.13 2004/01/27 19:11:43 wsnyder Exp $
+# $Id: IO.pm,v 1.16 2004/09/13 14:01:13 ws150726 Exp $
 # Author: Wilson Snyder <wsnyder@wsnyder.org>
 ######################################################################
 #
@@ -30,7 +30,7 @@ Verilog::Pli::IO - Verilog PLI I/O rerouting
 
 =head1 DESCRIPTION
 
-  This package allows a file to be outputted through the Verilog
+This package allows a file to be outputted through the Verilog
 PLI io_printf function, thus logging output on the screen as well as
 in any log files.
 
@@ -38,27 +38,30 @@ in any log files.
 
 =item Verilog::Pli::IO::tie_stdout ()
 
-  Connect STDOUT and STDERR to use the PLI printing handles.
+Connect STDOUT and STDERR to use the PLI printing handles.
 
 =item PRINT
 =item PRINTF
 
-  Standard handle methods.
+Standard handle methods.
 
 =back
 
-=head1 SEE ALSO
-
-C<Verilog::Pli>
-
 =head1 DISTRIBUTION
 
-The latest version is available from CPAN or
-C<http://veripool.com/verilog-perl>.
+The latest version is available from CPAN or L<http://www.veripool.com/>.
+
+Copyright 1998-2004 by Wilson Snyder.  This package is free software; you
+can redistribute it and/or modify it under the terms of either the GNU
+Lesser General Public License or the Perl Artistic License.
 
 =head1 AUTHORS
 
 Wilson Snyder <wsnyder@wsnyder.org>
+
+=head1 SEE ALSO
+
+L<Verilog::Pli>
 
 =cut
 ######################################################################
@@ -76,7 +79,7 @@ use Verilog::Pli;
 ######################################################################
 #### Configuration Section
 
-$VERSION = '1.7';
+$VERSION = '1.701';
 
 ######################################################################
 #### Package

@@ -1,5 +1,5 @@
 # Verilog::Pli - Verilog PLI
-# $Id: Pli.pm,v 1.17 2004/01/27 19:11:43 wsnyder Exp $
+# $Id: Pli.pm,v 1.20 2004/09/13 14:01:13 ws150726 Exp $
 # Author: Wilson Snyder <wsnyder@wsnyder.org>
 ######################################################################
 #
@@ -22,54 +22,62 @@ Verilog::Pli - Verilog PLI routine calls
 
   use Verilog::Pli;
 
-
 =head1 DESCRIPTION
 
-  This package allows access to Verilog PLI routines from perl.
-See the Verilog PLI Reference Manual for more information on these
-functions.
+This package allows access to Verilog PLI routines from perl.  See the
+Verilog PLI Reference Manual for more information on these functions.
 
-  This package has only been tested with VCS.  It should work with other
+This package has only been tested with VCS.  It should work with other
 simulators, though different header files may need to be included.
 
 =over 4
 
 =item mc_scan_plusargs (switch)
-  Return string if switch is set on command line.
+
+Return string if switch is set on command line.
 
 =item Verilog::Pli::io_printf (format, arg1)
-  Print a string using Verilog I/O.  Try to use C<Verilog::Pli::IO>
+
+Print a string using Verilog I/O.  Try to use L<Verilog::Pli::IO>
 instead of this routine.
 
 =item tf_dofinish
-  Finish the simulation.
+
+Finish the simulation.
 
 =item tf_dostop
-  Stop the simulation.
+
+Stop the simulation.
 
 =item tf_gettime
-  Return simulation time.
+
+Return simulation time.
 
 =item tf_igettime
-  Return simulation time for the passed instance.
+
+Return simulation time for the passed instance.
 
 =item tf_getinstance
-  Return the current instance.
+
+Return the current instance.
 
 =back
 
-=head1 SEE ALSO
-
-C<Verilog::Pli::IO>, C<Verilog::Pli::Net>
-
 =head1 DISTRIBUTION
 
-The latest version is available from CPAN or
-C<http://veripool.com/verilog-perl>.
+The latest version is available from CPAN or L<http://www.veripool.com/>.
+
+Copyright 1998-2004 by Wilson Snyder.  This package is free software; you
+can redistribute it and/or modify it under the terms of either the GNU
+Lesser General Public License or the Perl Artistic License.
 
 =head1 AUTHORS
 
 Wilson Snyder <wsnyder@wsnyder.org>
+
+=head1 SEE ALSO
+
+L<Verilog::Pli::IO>, L<Verilog::Pli::Net>
 
 =cut
 
@@ -87,7 +95,7 @@ use vars qw($VERSION);
 ######################################################################
 #### Configuration Section
 
-$VERSION = '1.7';
+$VERSION = '1.701';
 
 bootstrap Verilog::Pli;
 

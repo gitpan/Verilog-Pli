@@ -6,6 +6,10 @@ The contributors that suggested a given feature is shown in [].
 	
 This uses outline mode in Emacs.  See C-h m [M-x describe-mode].
 
+* Changes in Verilog::Pli 1.701 9/13/2004
+
+****	Documentation fixes.
+
 * Changes in Verilog::Pli 1.7 1/27/2004
 
 ****	Documentation fixes.
@@ -40,7 +44,7 @@ This uses outline mode in Emacs.  See C-h m [M-x describe-mode].
 **	First Announced CPAN Release
 
 ----------------------------------------------------------------------
-$Id: NEWS,v 1.9 2004/01/27 19:11:43 wsnyder Exp $
+$Id: NEWS,v 1.10 2004/09/13 14:01:13 ws150726 Exp $
 ----------------------------------------------------------------------
 Copyright information:
 

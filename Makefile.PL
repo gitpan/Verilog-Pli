@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.11 2004/01/27 19:11:43 wsnyder Exp $
+# $Id: Makefile.PL,v 1.13 2004/03/10 18:29:58 wsnyder Exp $
 # DESCRIPTION: Perl ExtUtils: Type 'perl Makefile.PL' to create a Makefile for this package
 #
 # Copyright 1998-2004 by Wilson Snyder.  This program is free software;
@@ -29,10 +29,16 @@ test::
 	(cd example ; make)
 
 ## Maintainer use:
+preexist:
+	test ! -r \$(HOME)/src/kits/\$(DISTVNAME).tar.gz
+
 tag:
 	cvs tag -F \$(DISTNAME)_\$(VERSION_SYM) .
 
-maintainer-dist: dist tag
+maintainer-diff:
+	cvs diff -r \$(DISTNAME)_\$(VERSION_SYM) 
+
+maintainer-dist: preexist dist tag
 	cp \$(DISTVNAME).tar.gz \$(HOME)/src/kits
 	mv \$(DISTVNAME).tar.gz \$(HOME)/backpack
 

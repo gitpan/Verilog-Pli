@@ -1,5 +1,5 @@
 # Verilog::Pli::Net - Verilog PLI - %NET tied hash
-# $Id: Net.pm,v 1.13 2004/01/27 19:11:43 wsnyder Exp $
+# $Id: Net.pm,v 1.16 2004/09/13 14:01:13 ws150726 Exp $
 # Author: Wilson Snyder <wsnyder@wsnyder.org>
 ######################################################################
 #
@@ -32,13 +32,13 @@ Verilog::Pli::Net - Verilog PLI tied net access hash
 
 =head1 DESCRIPTION
 
-  This package creates a tied hash %NET, that fetching from or storing to
+This package creates a tied hash %NET, that fetching from or storing to
 affects the Verilog signal named the same as the hash key.  The hiearchy
 may be placed in front of the signal names using standard dot notation, or
 if not found, the scope from when the tie was established, or later scope()
 calls is prepended to the passed signal name.
 
-  Signal names may have a leading %b: %d: %x: or %s: to return or set the
+Signal names may have a leading %b: %d: %x: or %s: to return or set the
 value in the binary, decimal, hex, or string format respectively.  Values
 may have a leading 0b or 0x to set the value in binary or hex format
 respectively.
@@ -47,24 +47,27 @@ respectively.
 
 =item scope
 
-  Read or change the default scope used when a signal is not found with the
+Read or change the default scope used when a signal is not found with the
 name passed.  Note you need to pass the class, use the tied function to
 convert from the tied hash to the class name.
 
 =back
 
-=head1 SEE ALSO
-
-C<Verilog::Pli>
-
 =head1 DISTRIBUTION
 
-The latest version is available from CPAN or
-C<http://veripool.com/verilog-perl>.
+The latest version is available from CPAN or L<http://www.veripool.com/>.
+
+Copyright 1998-2004 by Wilson Snyder.  This package is free software; you
+can redistribute it and/or modify it under the terms of either the GNU
+Lesser General Public License or the Perl Artistic License.
 
 =head1 AUTHORS
 
 Wilson Snyder <wsnyder@wsnyder.org>
+
+=head1 SEE ALSO
+
+L<Verilog::Pli>
 
 =cut
 ######################################################################
@@ -84,7 +87,7 @@ use Verilog::Pli;
 ######################################################################
 #### Configuration Section
 
-$VERSION = '1.7';
+$VERSION = '1.701';
 
 bootstrap Verilog::Pli::Net;
 

@@ -21,3 +21,4 @@ example/pli_hello.c
 example/simperl_boot.pl
 readme.texi
 typemap
+META.yml                                 Module meta-data (added by MakeMaker)
