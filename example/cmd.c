@@ -1,4 +1,4 @@
-/* $Id: cmd.c,v 1.5 2001/02/13 15:11:17 wsnyder Exp $ */
+/* $Id: cmd.c,v 1.7 2002/08/30 14:46:09 wsnyder Exp $ */
 /* Author: Wilson Snyder <wsnyder@wsnyder.org> */
 /***********************************************************************
  *
@@ -6,9 +6,7 @@
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of either the GNU General Public License or the
- * Perl Artistic License, with the exception that it cannot be placed
- * on a CD-ROM or similar media for commercial distribution without the
- * prior approval of the author.
+ * Perl Artistic License.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -35,7 +33,7 @@
 #include <EXTERN.h>             /* from the Perl distribution */
 #include <perl.h>               /* from the Perl distribution */
 
-#ifndef PL_na
+#if !defined(PL_na) && defined(na)
 # define PL_sv_undef	sv_undef
 # define PL_na		na
 #endif

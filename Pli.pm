@@ -1,5 +1,5 @@
 # Verilog::Pli - Verilog PLI
-# $Id: Pli.pm,v 1.11 2001/02/13 17:44:40 wsnyder Exp $
+# $Id: Pli.pm,v 1.14 2002/08/30 14:46:09 wsnyder Exp $
 # Author: Wilson Snyder <wsnyder@wsnyder.org>
 ######################################################################
 #
@@ -7,9 +7,7 @@
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of either the GNU General Public License or the
-# Perl Artistic License, with the exception that it cannot be placed
-# on a CD-ROM or similar media for commercial distribution without the
-# prior approval of the author.
+# Perl Artistic License.
 # 
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -72,7 +70,7 @@ C<Verilog::Pli::IO>, C<Verilog::Pli::Net>
 =head1 DISTRIBUTION
 
 The latest version is available from CPAN or
-C<http://www.ultranet.com/~wsnyder/verilog-perl>.
+C<http://veripool.com/verilog-perl>.
 
 =head1 AUTHORS
 
@@ -94,7 +92,7 @@ use vars qw($VERSION);
 ######################################################################
 #### Configuration Section
 
-$VERSION = '1.4';
+$VERSION = '1.5';
 
 bootstrap Verilog::Pli;
 

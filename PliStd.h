@@ -1,7 +1,7 @@
 #ifndef _PLISTD_H
 #define _PLISTD_H
 
-/* $Id: PliStd.h,v 1.10 2001/02/09 15:43:51 wsnyder Exp $ */
+/* $Id: PliStd.h,v 1.11 2001/02/26 23:06:53 wsnyder Exp $ */
 /* DESCRIPTION: Header to include PLI headers needed by the .xs routines  */
 /***********************************************************************/
 /* Verilog PLI: */
@@ -28,9 +28,7 @@
 /***********************************************************************/
 /* Perl */
 
-#ifndef __linux__
-# define HAS_BOOL
-#endif
+#define HAS_BOOL
 
 #ifdef __linux__
 # ifdef MIN
@@ -45,7 +43,7 @@
 #include "perl.h"
 #include "XSUB.h"
 
-#ifndef PL_na
+#if !defined(PL_na) && (PERL_API_REVISION < 5)
 # define PL_sv_undef	sv_undef
 # define PL_na		na
 #endif

@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.7 2001/02/13 15:11:16 wsnyder Exp $
+# $Id: Makefile.PL,v 1.8 2002/08/30 14:46:09 wsnyder Exp $
 # DESCRIPTION: Perl ExtUtils: Type 'perl Makefile.PL' to create a Makefile for this package
 
 use FindBin qw($RealBin);
@@ -18,16 +18,24 @@ README: readme.texi
 	-rm \$@
 	makeinfo \$< --output \$@ --no-headers --no-validate
 
-maintainer-clean: distclean
-	-rm README Makefile
-
-dist: distcheck README
-
 clean::
 	(cd example ; make clean)
 
 test::
 	(cd example ; make)
+
+## Maintainer use:
+tag:
+	cvs tag -F \$(DISTNAME)_\$(VERSION_SYM) .
+
+maintainer-dist: dist tag
+	cp \$(DISTVNAME).tar.gz \$(HOME)/src/kits
+	mv \$(DISTVNAME).tar.gz \$(HOME)/backpack
+
+maintainer-clean: distclean
+	-rm README Makefile
+
+dist: distcheck README
 
 ";
 }
