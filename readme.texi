@@ -59,7 +59,7 @@ Download the latest package from that site, and decompress.
 This version of Verilog::Pli has been built and tested on:
 
 @itemize @bullet
-@item sparc-sun-solaris2.5.1
+@item sparc-sun-solaris2.6
 @end itemize
 
 It should run on any system with perl and VCS or other simulator.
@@ -87,30 +87,20 @@ documentation.
 @section Interpreter
 
 You will need a perl interpreter inside your simulator to make this
-package useful.  
-
+package useful.  A example verilog file, pli C wrapper and all is inside
+the example directory.  This example uses VCS, but will work with minor
+modifications with Verilog-XL and other Verilog simulators with a PLI.
 
 @enumerate
 @item
-Read up on the perlembed manpage.
+cd example
 
 @item
-Make a program like @samp{perl_boot.c}, make a pli call for it.
-
-@item
-Add a @samp{initial $perlboot();} command in verilog to call the @samp{perl_boot.c}
-program.
-
-@item
-Link in Perl and the boot program with your simulator.  In VCS, you need something
-like @samp{ perl_boot.o -P pli_boot.tab [some_path]/DynaLoader.a [some_path]/libperl.a }
-
-@item
-You can easily write other PLI functions that call perl_eval_pv, allowing Verilog
-to invoke Perl routines.
+make
 
 @end enumerate
 
-This package is not for the PLI novice.  Unfortunately, I do not have
-the time to provide help on this part of the process.  At some point I
-will make a real example; contributions to this are most welcome.
+Thanks to Tom Kraljevic @email{tomk@@titanic.Abrizio.COM} for this
+example.
+
+

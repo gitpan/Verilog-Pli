@@ -11,8 +11,12 @@ Pli.pm
 Pli.xs
 PliStd.h
 Verilog/Pli/MMutil.pm
-perl_boot.c
-perl_boot.tab
+example/Makefile
+example/cmd.c
+example/hello.v
+example/pli.tab
+example/pli_hello.c
+example/simperl_boot.pl
 readme.texi
 typemap
 configure

@@ -1,0 +1,8 @@
+// This file is used by VCS to map user-defined `$' commands to specific
+// C routines.
+
+$pli_debug		call=pli_debug_pli
+$cmd_boot		call=cmd_boot_pli
+$cmd 			call=cmd_pli
+$cmdval			call=cmdval_pli	size=32
+$hello_verilog		call=hello_verilog

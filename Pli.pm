@@ -1,5 +1,5 @@
 # Verilog::Pli - Verilog PLI
-# $Id: Pli.pm,v 1.6 1999/06/02 17:30:22 wsnyder Exp $
+# $Id: Pli.pm,v 1.8 1999/10/25 19:25:49 wsnyder Exp $
 # Author: Wilson Snyder <wsnyder@ultranet.com>
 ######################################################################
 #
@@ -39,7 +39,7 @@ functions.
   This package has only been tested with VCS.  It should work with other
 simulators, though different header files may need to be included.
 
-=over 
+=over 4
 
 =item mc_scan_plusargs (switch)
   Return string if switch is set on command line.
@@ -63,7 +63,7 @@ instead of this routine.
 =item tf_getinstance
   Return the current instance.
 
-=over 
+=back
 
 =head1 SEE ALSO
 
@@ -94,7 +94,7 @@ use vars qw($VERSION);
 ######################################################################
 #### Configuration Section
 
-$VERSION = "1.1";
+$VERSION = "1.2";
 
 bootstrap Verilog::Pli;
 

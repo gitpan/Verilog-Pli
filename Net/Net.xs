@@ -30,6 +30,14 @@ handle net_defaulted_handle (VlNetTie_t *nt, char *net)
     return (net_handle);
 }
 
+char *safestrdup (const char *src)
+{
+    char *dest;
+    New (0, dest, strlen(src)+1, char);
+    strcpy (dest, src);
+    return (dest);
+}
+
 MODULE = Verilog::Pli::Net  PACKAGE = Verilog::Pli::Net
 
 #/**********************************************************************/

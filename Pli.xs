@@ -1,5 +1,5 @@
 #/* -*- Mode: C -*- */
-#/* $Id: Pli.xs,v 1.8 1999/06/02 17:30:22 wsnyder Exp $ */
+#/* $Id: Pli.xs,v 1.9 1999/10/25 19:25:50 wsnyder Exp $ */
 #/* Author: Wilson Snyder <wsnyder@ultranet.com> */
 #/*##################################################################### */
 #/* */
@@ -20,14 +20,6 @@
 #/*##################################################################### */
 
 #include "PliStd.h"
-
-char *safestrdup (const char *src)
-{
-    char *dest;
-    New (0, dest, strlen(src)+1, char);
-    strcpy (dest, src);
-    return (dest);
-}
 
 int pli_debug_level = 0;
 

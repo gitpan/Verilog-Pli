@@ -39,7 +39,7 @@ Supported Systems
 
    This version of Verilog::Pli has been built and tested on:
 
-   * sparc-sun-solaris2.5.1
+   * sparc-sun-solaris2.6
 
    It should run on any system with perl and VCS or other simulator.
 
@@ -60,24 +60,14 @@ Interpreter
 ===========
 
    You will need a perl interpreter inside your simulator to make this
-package useful.
+package useful.  A example verilog file, pli C wrapper and all is inside
+the example directory.  This example uses VCS, but will work with minor
+modifications with Verilog-XL and other Verilog simulators with a PLI.
 
-  1. Read up on the perlembed manpage.
+  1. cd example
 
-  2. Make a program like `perl_boot.c', make a pli call for it.
-
-  3. Add a `initial $perlboot();' command in verilog to call the
-     `perl_boot.c' program.
-
-  4. Link in Perl and the boot program with your simulator.  In VCS,
-     you need something like ` perl_boot.o -P pli_boot.tab
-     [some_path]/DynaLoader.a [some_path]/libperl.a '
-
-  5. You can easily write other PLI functions that call perl_eval_pv,
-     allowing Verilog to invoke Perl routines.
+  2. make
 
 
-   This package is not for the PLI novice.  Unfortunately, I do not have
-the time to provide help on this part of the process.  At some point I
-will make a real example; contributions to this are most welcome.
+   Thanks to Tom Kraljevic <tomk@titanic.Abrizio.COM> for this example.
 

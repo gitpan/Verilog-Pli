@@ -1,5 +1,5 @@
 # Verilog::Pli::IO - Verilog PLI - I/O rerouting
-# $Id: IO.pm,v 1.3 1999/06/02 17:30:27 wsnyder Exp $
+# $Id: IO.pm,v 1.4 1999/08/09 13:40:26 wsnyder Exp $
 # Author: Wilson Snyder <wsnyder@ultranet.com>
 ######################################################################
 #
@@ -41,7 +41,7 @@ Verilog::Pli::IO - Verilog PLI I/O rerouting
 PLI io_printf function, thus logging output on the screen as well as
 in any log files.
 
-=over 
+=over 4
 
 =item Verilog::Pli::IO::tie_stdout ()
 
@@ -52,7 +52,7 @@ in any log files.
 
   Standard handle methods.
 
-=over 
+=back
 
 =head1 SEE ALSO
 

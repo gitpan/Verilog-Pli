@@ -6,7 +6,7 @@ $VCS_HOME = $ENV{VCS_HOME};
 
 sub WriteMakefile {
     my %params = (
-		  VERSION => '1.1',
+		  VERSION => '1.2',
 		  INC => ("-I$VCS_HOME/sun_sparc_solaris_5.4/lib"
 			  ." -I$::RealBin"),
 		  @_);

@@ -1,5 +1,5 @@
 # Verilog::Pli::Net - Verilog PLI - %NET tied hash
-# $Id: Net.pm,v 1.2 1999/06/02 17:30:27 wsnyder Exp $
+# $Id: Net.pm,v 1.3 1999/08/09 13:40:26 wsnyder Exp $
 # Author: Wilson Snyder <wsnyder@ultranet.com>
 ######################################################################
 #
@@ -45,7 +45,7 @@ may be placed in front of the signal names using standard dot notation, or
 if not found, the scope from when the tie was established, or later scope()
 calls is prepended to the passed signal name.
 
-=over 
+=over 4
 
 =item scope
 
@@ -53,7 +53,7 @@ calls is prepended to the passed signal name.
 name passed.  Note you need to pass the class, use the tied function to
 convert from the tied hash to the class name.
 
-=over 
+=back
 
 =head1 SEE ALSO
 
