@@ -1,0 +1,3 @@
+TYPEMAP
+VlNetTie_t *	ANY_OBJECT
+

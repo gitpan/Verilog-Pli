@@ -1,0 +1,116 @@
+\input texinfo @c -*-texinfo-*-
+@c %**start of header
+@setfilename readme.info
+@settitle Perl Verilog::Pli Installation
+@c %**end of header
+
+@c This file is included by autoconf.texi and is used to produce
+@c the INSTALL file.
+
+@node Top, Copyright, (dir), (dir)
+
+This is the Verilog::Pli Perl Package.
+
+@menu
+* Copyright::                   
+* Description::                 
+* Obtaining Distribution::      
+* Supported Systems::           
+* Installation::                
+@end menu
+
+@node Copyright, Description, Top, Top
+@section Copyright
+
+This package is Copyright 1998 by Wilson Snyder @email{wsnyder@@ultranet.com}.
+
+You may distribute under the terms of either the GNU General Public License
+or the Artistic License, as specified in the Perl README file, with the
+exception that it cannot be placed on a CD-ROM or similar media for commercial
+distribution without the prior approval of the author.
+
+This code is provided with no warranty of any kind, and is used entirely at
+your own risk.
+
+@node Description, Obtaining Distribution, Copyright, Top
+@section Description
+
+This package provides access to Verilog PLI routines from within Perl.
+
+@example
+  $NET@{a_signal@} = 1
+  do_stop();
+@end example
+
+See @samp{man Verilog::Pli} after installation.
+
+@node Obtaining Distribution, Supported Systems, Description, Top
+@section Obtaining Distribution
+
+The latest version is available at 
+@uref{http://www.perl.org/CPAN/}
+
+Download the latest package from that site, and decompress.
+@samp{gunzip Verilog-Pli_version.tar.gz ; tar xvf Verilog-Pli_version.tar}
+
+@node Supported Systems, Installation, Obtaining Distribution, Top
+@section Supported Systems
+
+This version of Verilog::Pli has been built and tested on:
+
+@itemize @bullet
+@item sparc-sun-solaris2.5.1
+@end itemize
+
+It should run on any system with perl and VCS or other simulator.
+
+@node Installation, Interpreter, Supported Systems, Top
+@section Installation
+
+@enumerate
+@item
+@code{cd} to the directory containing this INSTALL notice.
+
+@item
+Type @samp{perl Makefile.PL} to configure Verilog::Pli for your system.
+
+@item
+Type @samp{make} to compile Verilog::Pli.
+
+@item
+Type @samp{make install} to install the programs and any data files and
+documentation.
+
+@end enumerate
+
+@node Interpreter,  , Installation, Top
+@section Interpreter
+
+You will need a perl interpreter inside your simulator to make this
+package useful.  
+
+
+@enumerate
+@item
+Read up on the perlembed manpage.
+
+@item
+Make a program like @samp{perl_boot.c}, make a pli call for it.
+
+@item
+Add a @samp{initial $perlboot();} command in verilog to call the @samp{perl_boot.c}
+program.
+
+@item
+Link in Perl and the boot program with your simulator.  In VCS, you need something
+like @samp{ perl_boot.o -P pli_boot.tab [some_path]/DynaLoader.a [some_path]/libperl.a }
+
+@item
+You can easily write other PLI functions that call perl_eval_pv, allowing Verilog
+to invoke Perl routines.
+
+@end enumerate
+
+This package is not for the PLI novice.  Unfortunately, I do not have
+the time to provide help on this part of the process.  At some point I
+will make a real example; contributions to this are most welcome.
