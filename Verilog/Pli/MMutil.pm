@@ -1,5 +1,9 @@
-# $Id: MMutil.pm,v 1.10 2003/07/21 21:32:31 wsnyder Exp $
+# $Id: MMutil.pm,v 1.12 2004/01/27 19:11:43 wsnyder Exp $
 # DESCRIPTION: Perl ExtUtils: Define VCS building rules for Makefile.PL
+#
+# Copyright 1998-2004 by Wilson Snyder.  This program is free software;
+# you can redistribute it and/or modify it under the terms of either the GNU
+# General Public License or the Perl Artistic License.
 
 package Verilog::Pli::MMutil;
 use ExtUtils::MakeMaker;

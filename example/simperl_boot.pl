@@ -1,5 +1,7 @@
-# $Id: simperl_boot.pl,v 1.5 2003/07/22 15:39:01 wsnyder Exp $
+# $Id: simperl_boot.pl,v 1.6 2003/09/22 19:30:51 wsnyder Exp $
 # DESCRIPTION: Verilog::PLI: Example perl code booted in verilog initial block
+# This file ONLY is placed into the Public Domain, for any use,
+# without warranty, 2003 by Wilson Snyder.
 ######################################################################
 
 use Test;  BEGIN { plan tests => 11 }

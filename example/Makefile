@@ -1,5 +1,7 @@
-# $Id: Makefile,v 1.8 2003/07/22 15:39:01 wsnyder Exp $
+# $Id: Makefile,v 1.9 2003/09/22 19:30:51 wsnyder Exp $
 # DESCRIPTION: Verilog::PLI: Example Makefile for trivial PLI use under VCS.
+# This file ONLY is placed into the Public Domain, for any use,
+# without warranty, 2003 by Wilson Snyder.
 ######################################################################
 
 # This section may need tuning

@@ -1,5 +1,9 @@
-# $Id: Makefile.PL,v 1.9 2003/07/22 14:46:56 wsnyder Exp $
+# $Id: Makefile.PL,v 1.11 2004/01/27 19:11:43 wsnyder Exp $
 # DESCRIPTION: Perl ExtUtils: Type 'perl Makefile.PL' to create a Makefile for this package
+#
+# Copyright 1998-2004 by Wilson Snyder.  This program is free software;
+# you can redistribute it and/or modify it under the terms of either the GNU
+# General Public License or the Perl Artistic License.
 
 use FindBin qw($RealBin);
 use lib $RealBin;

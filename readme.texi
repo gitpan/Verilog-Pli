@@ -4,7 +4,7 @@
 @settitle Perl Verilog::Pli Installation
 @c %**end of header
 
-@c $Id: readme.texi,v 1.9 2003/07/22 14:46:56 wsnyder Exp $
+@c $Id: readme.texi,v 1.12 2004/01/27 19:11:43 wsnyder Exp $
 @c DESCRIPTION: TexInfo: DOCUMENT source run through texinfo to produce README file
 @c Use 'make README' to produce the output file
 
@@ -23,7 +23,7 @@ This is the Verilog::Pli Perl Package.
 @node Copyright, Description, Top, Top
 @section Copyright
 
-This package is Copyright 2003 by Wilson Snyder @email{wsnyder@@wsnyder.org}.
+This package is Copyright 1998-2004 by Wilson Snyder @email{wsnyder@@wsnyder.org}.
 
 You may distribute under the terms of either the GNU General Public
 License or the Perl Artistic License, as specified in the Perl README
@@ -77,7 +77,9 @@ with minor porting.
 Type @samp{perl Makefile.PL} to configure Verilog::Pli for your system.
 
 @item
-Type @samp{make} to compile Verilog::Pli.
+Type @samp{make} to compile Verilog::Pli.  If you are not using VCS
+and get a error about vcsuser.h not being found, you may need to
+change the include of vcsuser.h in perl_cmd.c to veriuser.h.
 
 @item
 Type @samp{make install} to install the programs and any data files and

@@ -3,7 +3,7 @@
 Copyright
 =========
 
-   This package is Copyright 2003 by Wilson Snyder
+   This package is Copyright 1998-2004 by Wilson Snyder
 <wsnyder@wsnyder.org>.
 
    You may distribute under the terms of either the GNU General Public
@@ -51,7 +51,9 @@ Installation
 
   2. Type `perl Makefile.PL' to configure Verilog::Pli for your system.
 
-  3. Type `make' to compile Verilog::Pli.
+  3. Type `make' to compile Verilog::Pli.  If you are not using VCS and
+     get a error about vcsuser.h not being found, you may need to
+     change the include of vcsuser.h in perl_cmd.c to veriuser.h.
 
   4. Type `make install' to install the programs and any data files and
      documentation.

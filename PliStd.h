@@ -1,8 +1,12 @@
 #ifndef _PLISTD_H
 #define _PLISTD_H
 
-/* $Id: PliStd.h,v 1.11 2001/02/26 23:06:53 wsnyder Exp $ */
+/* $Id: PliStd.h,v 1.13 2004/01/27 19:11:43 wsnyder Exp $ */
 /* DESCRIPTION: Header to include PLI headers needed by the .xs routines  */
+/* */
+/* Copyright 1998-2004 by Wilson Snyder.  This program is free software; */
+/* you can redistribute it and/or modify it under the terms of either the GNU */
+/* General Public License or the Perl Artistic License. */
 /***********************************************************************/
 /* Verilog PLI: */
 
