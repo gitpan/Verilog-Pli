@@ -1,9 +1,9 @@
 #/* -*- Mode: C -*- */
-#/* $Id: Net.xs,v 1.13 2004/01/27 19:11:43 wsnyder Exp $ */
+#/* $Id: Net.xs,v 1.16 2005/05/05 20:18:40 wsnyder Exp $ */
 #/* Author: Wilson Snyder <wsnyder@wsnyder.org> */
 #/*##################################################################### */
 #/* */
-#/* Copyright 1998-2004 by Wilson Snyder.  This program is free software; */
+#/* Copyright 1998-2005 by Wilson Snyder.  This program is free software; */
 #/* you can redistribute it and/or modify it under the terms of either the GNU */
 #/* General Public License or the Perl Artistic License. */
 #/*  */
@@ -107,6 +107,7 @@ DELETE (nt)
 VlNetTie_t *nt
 PROTOTYPE: $
 CODE:
+    safefree (nt->scope);
     safefree (nt);
 
 #/**********************************************************************/
@@ -247,7 +248,7 @@ FIRSTKEY(nt, ...)
     VlNetTie_t *nt
 CODE:
 {
-    static regs[4] = {accRegister, accIntegerVar, accWire, 0};
+    static int regs[4] = {accRegister, accIntegerVar, accWire, 0};
     ST(0) = sv_newmortal();
     nt->net_handle = NULL;
     nt->mod_handle = acc_handle_object (nt->scope);
@@ -266,7 +267,7 @@ NEXTKEY(nt, ...)
     VlNetTie_t *nt
 CODE:
 {
-    static regs[4] = {accRegister, accIntegerVar, accWire, 0};
+    static int regs[4] = {accRegister, accIntegerVar, accWire, 0};
     ST(0) = sv_newmortal();
     if (nt->net_handle) {
 	nt->net_handle = acc_next (regs, nt->mod_handle, nt->net_handle);

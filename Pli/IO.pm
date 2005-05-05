@@ -1,9 +1,9 @@
 # Verilog::Pli::IO - Verilog PLI - I/O rerouting
-# $Id: IO.pm,v 1.16 2004/09/13 14:01:13 ws150726 Exp $
+# $Id: IO.pm,v 1.17 2005/05/05 20:18:40 wsnyder Exp $
 # Author: Wilson Snyder <wsnyder@wsnyder.org>
 ######################################################################
 #
-# Copyright 1998-2004 by Wilson Snyder.  This program is free software;
+# Copyright 1998-2005 by Wilson Snyder.  This program is free software;
 # you can redistribute it and/or modify it under the terms of either the GNU
 # General Public License or the Perl Artistic License.
 # 
@@ -51,7 +51,7 @@ Standard handle methods.
 
 The latest version is available from CPAN or L<http://www.veripool.com/>.
 
-Copyright 1998-2004 by Wilson Snyder.  This package is free software; you
+Copyright 1998-2005 by Wilson Snyder.  This package is free software; you
 can redistribute it and/or modify it under the terms of either the GNU
 Lesser General Public License or the Perl Artistic License.
 
@@ -79,7 +79,7 @@ use Verilog::Pli;
 ######################################################################
 #### Configuration Section
 
-$VERSION = '1.701';
+$VERSION = '1.702';
 
 ######################################################################
 #### Package

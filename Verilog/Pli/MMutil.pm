@@ -1,7 +1,7 @@
-# $Id: MMutil.pm,v 1.12 2004/01/27 19:11:43 wsnyder Exp $
+# $Id: MMutil.pm,v 1.14 2005/05/05 20:18:40 wsnyder Exp $
 # DESCRIPTION: Perl ExtUtils: Define VCS building rules for Makefile.PL
 #
-# Copyright 1998-2004 by Wilson Snyder.  This program is free software;
+# Copyright 1998-2005 by Wilson Snyder.  This program is free software;
 # you can redistribute it and/or modify it under the terms of either the GNU
 # General Public License or the Perl Artistic License.
 
@@ -15,6 +15,10 @@ if ($ENV{VCS_HOME}) {
     $try = "$ENV{VCS_HOME}/sun_sparc_solaris_5.5.1/lib"; $PLI_INCLUDE_HOME ||= $try if -d $try;
     $try = "$ENV{VCS_HOME}/sun_sparc_solaris_5.4/lib";   $PLI_INCLUDE_HOME ||= $try if -d $try;
     $try = "$ENV{VCS_HOME}/intel_i686_linux_2.2/lib";    $PLI_INCLUDE_HOME ||= $try if -d $try;
+}
+if ($ENV{NC_ROOT}) {
+    my $try;
+    $try = "$ENV{NC_ROOT}/tools/include";               $PLI_INCLUDE_HOME ||= $try if -d $try;
 }
 
 (defined $PLI_INCLUDE_HOME) or die "%Error: PLI_INCLUDE_HOME or VCS_HOME must be defined to find acc_user.h include files\n";

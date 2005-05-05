@@ -1,9 +1,12 @@
-   This is the Verilog::Pli Perl Package.
+1 Verilog::Pli
+**************
 
-Copyright
-=========
+This is the Verilog::Pli Perl Package.
 
-   This package is Copyright 1998-2004 by Wilson Snyder
+1.1 Copyright
+=============
+
+This package is Copyright 1998-2005 by Wilson Snyder
 <wsnyder@wsnyder.org>.
 
    You may distribute under the terms of either the GNU General Public
@@ -13,29 +16,28 @@ file.
    This code is provided with no warranty of any kind, and is used
 entirely at your own risk.
 
-Description
-===========
+1.2 Description
+===============
 
-   This package provides access to Verilog PLI routines from within
-Perl.
+This package provides access to Verilog PLI routines from within Perl.
 
        $NET{a_signal} = 1
        do_stop();
 
    See `man Verilog::Pli' after installation.
 
-Obtaining Distribution
-======================
+1.3 Obtaining Distribution
+==========================
 
-   The latest version is available at `http://www.perl.org/CPAN/'
+The latest version is available at `http://www.perl.org/CPAN/'
 
    Download the latest package from that site, and decompress.  `gunzip
 Verilog-Pli_version.tar.gz ; tar xvf Verilog-Pli_version.tar'
 
-Supported Systems
-=================
+1.4 Supported Systems
+=====================
 
-   This version of Verilog::Pli has been built and tested on:
+This version of Verilog::Pli has been built and tested on:
 
    * sparc-sun-solaris2.6
 
@@ -44,8 +46,8 @@ Supported Systems
    It should run on any system with Perl and VCS or other Verilog
 simulator with minor porting.
 
-Installation
-============
+1.5 Installation
+================
 
   1. `cd' to the directory containing this INSTALL notice.
 
@@ -61,10 +63,10 @@ Installation
   5. If you have VCS, `cd example ; make' to see an example.
 
 
-Interpreter
-===========
+1.6 Interpreter
+===============
 
-   You will need a perl interpreter inside your simulator to make this
+You will need a perl interpreter inside your simulator to make this
 package useful.  A example verilog file, pli C wrapper and all is inside
 the example directory.  This example uses VCS, but will work with minor
 modifications with Verilog-XL and other Verilog simulators with a PLI.

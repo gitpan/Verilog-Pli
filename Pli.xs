@@ -1,9 +1,9 @@
 #/* -*- Mode: C -*- */
-#/* $Id: Pli.xs,v 1.15 2004/01/27 19:11:43 wsnyder Exp $ */
+#/* $Id: Pli.xs,v 1.16 2005/05/05 20:18:40 wsnyder Exp $ */
 #/* Author: Wilson Snyder <wsnyder@wsnyder.org> */
 #/*##################################################################### */
 #/* */
-#/* Copyright 1998-2004 by Wilson Snyder.  This program is free software; */
+#/* Copyright 1998-2005 by Wilson Snyder.  This program is free software; */
 #/* you can redistribute it and/or modify it under the terms of either the GNU */
 #/* General Public License or the Perl Artistic License. */
 #/*  */

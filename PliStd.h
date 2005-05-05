@@ -1,10 +1,10 @@
 #ifndef _PLISTD_H
 #define _PLISTD_H
 
-/* $Id: PliStd.h,v 1.13 2004/01/27 19:11:43 wsnyder Exp $ */
+/* $Id: PliStd.h,v 1.15 2005/05/05 20:18:40 wsnyder Exp $ */
 /* DESCRIPTION: Header to include PLI headers needed by the .xs routines  */
 /* */
-/* Copyright 1998-2004 by Wilson Snyder.  This program is free software; */
+/* Copyright 1998-2005 by Wilson Snyder.  This program is free software; */
 /* you can redistribute it and/or modify it under the terms of either the GNU */
 /* General Public License or the Perl Artistic License. */
 /***********************************************************************/
@@ -27,7 +27,7 @@
 #endif
 
 #include <acc_user.h>
-#include <vcsuser.h>
+#include <veriuser.h>
 
 /***********************************************************************/
 /* Perl */

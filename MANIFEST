@@ -1,7 +1,7 @@
 COPYING
 MANIFEST
 Makefile.PL
-NEWS
+Changes
 Net/Makefile.PL
 Net/Net.pm
 Net/Net.xs
