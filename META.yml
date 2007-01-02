@@ -1,7 +1,7 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         Verilog-Pli
-version:      1.702
+version:      1.703
 version_from: Pli.pm
 license:      perl
 installdirs:  site

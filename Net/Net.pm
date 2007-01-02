@@ -1,9 +1,9 @@
 # Verilog::Pli::Net - Verilog PLI - %NET tied hash
-# $Id: Net.pm,v 1.17 2005/05/05 20:18:40 wsnyder Exp $
+# $Id: Net.pm 36 2007-01-02 15:24:59Z wsnyder $
 # Author: Wilson Snyder <wsnyder@wsnyder.org>
 ######################################################################
 #
-# Copyright 1998-2005 by Wilson Snyder.  This program is free software;
+# Copyright 1998-2007 by Wilson Snyder.  This program is free software;
 # you can redistribute it and/or modify it under the terms of either the GNU
 # General Public License or the Perl Artistic License.
 # 
@@ -33,7 +33,7 @@ Verilog::Pli::Net - Verilog PLI tied net access hash
 =head1 DESCRIPTION
 
 This package creates a tied hash %NET, that fetching from or storing to
-affects the Verilog signal named the same as the hash key.  The hiearchy
+affects the Verilog signal named the same as the hash key.  The hierarchy
 may be placed in front of the signal names using standard dot notation, or
 if not found, the scope from when the tie was established, or later scope()
 calls is prepended to the passed signal name.
@@ -57,7 +57,7 @@ convert from the tied hash to the class name.
 
 The latest version is available from CPAN or L<http://www.veripool.com/>.
 
-Copyright 1998-2005 by Wilson Snyder.  This package is free software; you
+Copyright 1998-2007 by Wilson Snyder.  This package is free software; you
 can redistribute it and/or modify it under the terms of either the GNU
 Lesser General Public License or the Perl Artistic License.
 
@@ -87,7 +87,7 @@ use Verilog::Pli;
 ######################################################################
 #### Configuration Section
 
-$VERSION = '1.702';
+$VERSION = '1.703';
 
 bootstrap Verilog::Pli::Net;
 

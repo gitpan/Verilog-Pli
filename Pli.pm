@@ -1,9 +1,9 @@
 # Verilog::Pli - Verilog PLI
-# $Id: Pli.pm,v 1.21 2005/05/05 20:18:40 wsnyder Exp $
+# $Id: Pli.pm 36 2007-01-02 15:24:59Z wsnyder $
 # Author: Wilson Snyder <wsnyder@wsnyder.org>
 ######################################################################
 #
-# Copyright 1998-2005 by Wilson Snyder.  This program is free software;
+# Copyright 1998-2007 by Wilson Snyder.  This program is free software;
 # you can redistribute it and/or modify it under the terms of either the GNU
 # General Public License or the Perl Artistic License.
 # 
@@ -67,7 +67,7 @@ Return the current instance.
 
 The latest version is available from CPAN or L<http://www.veripool.com/>.
 
-Copyright 1998-2005 by Wilson Snyder.  This package is free software; you
+Copyright 1998-2007 by Wilson Snyder.  This package is free software; you
 can redistribute it and/or modify it under the terms of either the GNU
 Lesser General Public License or the Perl Artistic License.
 
@@ -95,7 +95,7 @@ use vars qw($VERSION);
 ######################################################################
 #### Configuration Section
 
-$VERSION = '1.702';
+$VERSION = '1.703';
 
 bootstrap Verilog::Pli;
 

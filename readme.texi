@@ -4,7 +4,7 @@
 @settitle Perl Verilog::Pli Installation
 @c %**end of header
 
-@c $Id: readme.texi,v 1.14 2005/05/05 20:18:40 wsnyder Exp $
+@c $Id: readme.texi 36 2007-01-02 15:24:59Z wsnyder $
 @c DESCRIPTION: TexInfo: DOCUMENT source run through texinfo to produce README file
 @c Use 'make README' to produce the output file
 @c Before release, run C-u C-c C-u C-a (texinfo-all-menus-update)
@@ -25,7 +25,7 @@ This is the Verilog::Pli Perl Package.
 @node Copyright, Description, Top, Top
 @section Copyright
 
-This package is Copyright 1998-2005 by Wilson Snyder @email{wsnyder@@wsnyder.org}.
+This package is Copyright 1998-2007 by Wilson Snyder @email{wsnyder@@wsnyder.org}.
 
 You may distribute under the terms of either the GNU General Public
 License or the Perl Artistic License, as specified in the Perl README

@@ -1,7 +1,19 @@
-COPYING
-MANIFEST
-Makefile.PL
+.cvsignore
 Changes
+configure
+COPYING
+example/.cvsignore
+example/cmd.c
+example/hello.v
+example/Makefile
+example/perlxsi.c
+example/pli.tab
+example/pli_hello.c
+example/simperl_boot.pl
+Makefile.PL
+MANIFEST
+META.yml			Module meta-data (added by MakeMaker)
+Net/.cvsignore
 Net/Makefile.PL
 Net/Net.pm
 Net/Net.xs
@@ -11,14 +23,6 @@ Pli.xs
 Pli/IO.pm
 PliStd.h
 README
-Verilog/Pli/MMutil.pm
-configure
-example/Makefile
-example/cmd.c
-example/hello.v
-example/pli.tab
-example/pli_hello.c
-example/simperl_boot.pl
 readme.texi
 typemap
-META.yml                                 Module meta-data (added by MakeMaker)
+Verilog/Pli/MMutil.pm

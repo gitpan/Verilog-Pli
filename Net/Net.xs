@@ -1,9 +1,9 @@
 #/* -*- Mode: C -*- */
-#/* $Id: Net.xs,v 1.16 2005/05/05 20:18:40 wsnyder Exp $ */
+#/* $Id: Net.xs 36 2007-01-02 15:24:59Z wsnyder $ */
 #/* Author: Wilson Snyder <wsnyder@wsnyder.org> */
 #/*##################################################################### */
 #/* */
-#/* Copyright 1998-2005 by Wilson Snyder.  This program is free software; */
+#/* Copyright 1998-2007 by Wilson Snyder.  This program is free software; */
 #/* you can redistribute it and/or modify it under the terms of either the GNU */
 #/* General Public License or the Perl Artistic License. */
 #/*  */
@@ -196,9 +196,9 @@ CODE:
 	if (!acc_error_flag) {
 	    RETVAL = TRUE;
 	    if (logen || pli_debug_level>=8) {
-		pli_info (0, "%-25s set to: %10s\n",
-			  acc_fetch_name (net_handle),
-			  acc_fetch_value (net_handle, "%d", NULL));
+		printf ("-Verilog::Pli::Net: %-25s set to: %10s\n",
+			acc_fetch_name (net_handle),
+			acc_fetch_value (net_handle, "%d", NULL));
 	    }
 	}
 	acc_close ();
